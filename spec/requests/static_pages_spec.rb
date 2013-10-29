@@ -35,6 +35,8 @@ end
 
     it "should have the right links on the layout" do
       visit root_path
+      click_link "Sign in"
+      expect(page).to have_title('Sign in')      
       click_link "About"
       expect(page).to have_title('About Us')
       click_link "Help"
